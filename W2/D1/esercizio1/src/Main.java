@@ -1,11 +1,14 @@
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import java.util.Random;
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     private static int[] cas;
     public static void main(String[] args) {
+        //il logger vuole la classe di appartenenza come parametro
+        final Logger logger= LoggerFactory.getLogger(Main.class);
 
         Scanner scan = new Scanner(System.in);
 
@@ -25,6 +28,10 @@ public class Main {
 
                 for (int i = 0; i < cas.length; i++) {
                     System.out.print(cas[i] + ", ");
+                    logger.info(Integer.toString(cas[i]));
+
+
+
                 }
             } else {
                 System.out.println("ok");
