@@ -1,0 +1,9 @@
+-- SELECT nome, cognome FROM public.clienti WHERE datanascita > '1982-01-01'
+-- SELECT * FROM public.clienti WHERE nome = 'M'
+-- SELECT COUNT(*) FROM public.fatture a WHERE a.iva=20
+-- SELECT EXTRACT(YEAR FROM prodotti.dataattivazione) FROM public.prodotti WHERE (dataattivazione BETWEEN '2017-01-01' AND '2017-12-31') AND (inproduzione=true or incommercio=false)
+-- SELECT * FROM prodotti.fatture WHERE importo<1000 JOIN fatture ON idcliente=numerocliente
+-- SELECT fatture.*  FROM fatture JOIN clienti ON fatture.idcliente = clienti.numerocliente WHERE fatture.importo < 1000;
+-- SELECT numerofattura, importo, iva, datafattura FROM fatture JOIN fornitori USING(numerofornitore)
+-- SELECT COUNT(*), EXTRACT(YEAR FROM fatture.datafattura) AS anno FROM fatture WHERE iva=20 GROUP BY anno
+-- SELECT COUNT(*),SUM(importo),EXTRACT(YEAR FROM fatture.datafattura) AS anno FROM fatture WHERE iva=20 GROUP BY anno
